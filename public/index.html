@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>rohire</title>
+<meta name="description" content="roblox devforum hiring and for hire posts without the sellers and off topic posts">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="/">rohire<svg class="badge" viewBox="0 0 32 32" aria-hidden="true"><path d="M7.91703 2L2 24.083L24.083 30L30 7.91703L7.91703 2ZM18.2592 19.9135L12.0885 18.2592L13.7427 12.0885L19.916 13.7427L18.2592 19.9135Z" fill="currentColor"/></svg></a>
+  <nav class="tabs" id="tabs">
+    <button data-tab="hiring" class="on" data-icon="briefcase">jobs <span id="countHiring"></span></button>
+    <button data-tab="forhire" data-icon="user">for hire <span id="countForhire"></span></button>
+    <i class="tabline" id="tabline"></i>
+  </nav>
+  <div class="search" data-icon="search">
+    <input id="q" type="search" placeholder="search titles, posts, people" autocomplete="off" spellcheck="false">
+  </div>
+  <button class="filterBtn" id="filterBtn" data-icon="sliders" aria-label="filters"><span>filters</span></button>
+</header>
+
+<main class="layout">
+  <aside class="filters" id="filters">
+    <section>
+      <h4 data-icon="tag">role</h4>
+      <div class="opts" id="roles"></div>
+    </section>
+    <section>
+      <h4 data-icon="coins">payment</h4>
+      <div class="opts" id="pay">
+        <button data-pay="any" class="on" data-icon="wallet">any</button>
+        <button data-pay="paid" data-icon="coins">paid</button>
+        <button data-pay="r" data-icon="robux">robux</button>
+        <button data-pay="u" data-icon="usd">usd</button>
+        <button data-pay="p" data-icon="percent">revenue share</button>
+        <button data-pay="v" data-icon="heart">volunteer</button>
+      </div>
+    </section>
+    <section>
+      <h4 data-icon="clock">posted</h4>
+      <div class="opts" id="within">
+        <button data-within="0" class="on">any time</button>
+        <button data-within="1">last 24 hours</button>
+        <button data-within="3">last 3 days</button>
+        <button data-within="7">last week</button>
+      </div>
+    </section>
+    <section>
+      <h4 data-icon="sort">sort</h4>
+      <div class="opts" id="sort">
+        <button data-sort="new" class="on">newest</button>
+        <button data-sort="active">recently active</button>
+        <button data-sort="views">most viewed</button>
+        <button data-sort="pay">highest pay</button>
+      </div>
+    </section>
+    <button class="reset" id="reset" data-icon="reset">reset filters</button>
+    <p class="note" id="updated"></p>
+  </aside>
+
+  <section class="results">
+    <div class="resultsHead"><span id="resultCount"></span></div>
+    <div class="list" id="list"></div>
+  </section>
+
+  <section class="detail" id="detail">
+    <div class="detailEmpty" id="detailEmpty"><span data-icon="doc">select a post to read it</span></div>
+    <div class="detailBody" id="detailBody" hidden></div>
+  </section>
+</main>
+<div class="scrim" id="scrim"></div>
+
+<script src="/app.js"></script>
+</body>
+</html>

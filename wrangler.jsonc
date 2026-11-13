@@ -1,0 +1,28 @@
+{
+  "name": "rohire",
+  "main": "src/index.js",
+  "account_id": "7eefd22f30e5c1706b004911d075944b",
+  "compatibility_date": "2026-10-13",
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "rohire",
+      "database_id": "f6568abb-27c3-4a0e-a2e5-19cb7ec0484d",
+      "migrations_dir": "migrations"
+    }
+  ],
+  "triggers": {
+    "crons": ["* * * * *"]
+  },
+  "ratelimits": [
+    {
+      "name": "API_LIMITER",
+      "namespace_id": "2001",
+      "simple": { "limit": 120, "period": 60 }
+    }
+  ]
+}
